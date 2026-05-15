@@ -18,7 +18,7 @@ app.listen(PORT, () => {
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
 
 bot.start((ctx) => {
   ctx.reply("Hello! I am RO-BOT 🤖\nAsk me anything.");
